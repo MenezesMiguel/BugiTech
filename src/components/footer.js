@@ -11,9 +11,9 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-white py-8 border-t h-auto">
-      <div className="w-full max-w-[1200px] flex flex-col sm:flex-row justify-between items-start px-4 py-2 mx-auto">
+      <div className="w-full max-w-[1200px] flex flex-col xs:flex-row justify-between items-start px-4 py-2 mx-auto">
         {/* Coluna 1: Logo e Descrição */}
-        <div className="flex-1 max-w-[40%] text-gray-400 text-justify text-[14px]">
+        <div className="flex-1 w-full xs:max-w-[60%] text-gray-400 text-justify text-[14px]">
           <Image
             src="/images/logoHeader2.png"
             alt="Next.js logo"
@@ -61,7 +61,7 @@ export default function Footer() {
         </div> */}
 
         {/* Coluna 3: Redes Sociais */}
-        <div className="flex flex-col px-[8px] py-[16px] justify-end text-gray-600">
+        <div className="flex flex-col w-full xs:w-auto items-center px-[8px] py-[16px] justify-center xs:justify-end text-gray-600">
           <h3 className="text-lg font-bold mb-4">Nossas redes sociais</h3>
           <div className="flex space-x-4">
             <a

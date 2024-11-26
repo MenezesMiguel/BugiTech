@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { IoTimeOutline, IoOpenOutline, IoOpen } from "react-icons/io5";
 import { IoMdOpen } from "react-icons/io";
+import CoupomCard from "./couponCard";
 
 export default function PromoCard() {
   return (
-    <div className="bg-white w-[300px] h-[500px] rounded-xl p-5">
-      <div className="bg-blue-200 w-auto h-[25px] flex row">
+    <div className="bg-white w-[300px] h-[500px] rounded-xl p-5 flex flex-col justify-between">
+      <div className="w-auto h-[25px] flex row">
         <div className="w-[60%] h-[100%] flex row items-center">
           <Image
             className="mr-1 "
@@ -48,9 +49,12 @@ export default function PromoCard() {
         {" "}
         à vista
       </p>
+      <div className="flex justify-center w-full">
+        <CoupomCard />
+      </div>
       <button className="flex row w-[100%] h-[40px] bg-[#926045] mt-5 justify-center items-center rounded-full font-bold">
         Abrir Promo
-        <IoMdOpen  className="m-[10px]" />
+        <IoMdOpen className="m-[10px]" />
       </button>
     </div>
   );
