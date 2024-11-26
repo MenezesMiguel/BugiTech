@@ -11,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-white py-8 border-t h-auto">
-      <div className="w-full max-w-[1200px] flex flex-col xs:flex-row justify-between items-start px-4 py-2 mx-auto">
+      <div className="w-full max-w-[1300px] flex flex-col xs:flex-row justify-between items-start px-4 py-2 mx-auto">
         {/* Coluna 1: Logo e Descrição */}
         <div className="flex-1 w-full xs:max-w-[60%] text-gray-400 text-justify text-[14px]">
           <Image

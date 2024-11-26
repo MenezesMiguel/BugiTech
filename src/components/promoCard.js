@@ -45,7 +45,7 @@ export default function PromoCard() {
       <div className="flex items-center justify-center w-full text-4xl">
         <p className="justify-center font-bold text-[#926045]"> R$ 129,90</p>
       </div>
-      <p className="text-gray-400 font-bold text-xs flex justify-center">
+      <p className="text-gray-600 font-bold text-xs flex justify-center">
         {" "}
         à vista
       </p>
