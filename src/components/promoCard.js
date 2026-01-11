@@ -7,12 +7,27 @@ import { IoMdOpen } from "react-icons/io";
 import CoupomCard from "./couponCard";
 
 export default function PromoCard() {
+  const [user, setUser] = useState(true);
+
+  const handleDeletePromo = (event) => {
+    alert("Tem certeza?");
+  };
+
   return (
-    <div className="bg-white w-[300px] h-[500px] rounded-xl p-5 flex flex-col justify-between">
+    <div className="relative bg-white w-[300px] h-[500px] rounded-xl p-5 flex flex-col justify-between">
+      {user ? (
+        <button
+          className="absolute top-[-10px] right-[-10px] w-[30px] h-[30px] bg-red-500 rounded-full flex items-center justify-center shadow-lg"
+          onClick={handleDeletePromo}
+        >
+          <p className="text-white text-sm font-bold">X</p>
+        </button>
+      ) : null}
+
       <div className="w-auto h-[25px] flex row">
         <div className="w-[60%] h-[100%] flex row items-center">
           <Image
-            className="mr-1 "
+            className="mr-1"
             src="/images/logoHeader2.png"
             alt="Next.js logo"
             priority
@@ -28,7 +43,6 @@ export default function PromoCard() {
       </div>
       <div className="w-auto h-[35%] flex items-center justify-center">
         <Image
-          //className="mr-1 w-full h-auto"
           src="/images/logoHeader2.png"
           alt="Next.js logo"
           priority
@@ -37,7 +51,6 @@ export default function PromoCard() {
         />
       </div>
       <p className="text-gray-900 text-center leading-tight font-bold mb-3">
-        {" "}
         Bugitech, ipsum loren ipsum loren ipsun
       </p>
       <p className="text-gray-400 font-bold text-xs"> De R$ 699,90</p>
@@ -46,7 +59,6 @@ export default function PromoCard() {
         <p className="justify-center font-bold text-[#926045]"> R$ 129,90</p>
       </div>
       <p className="text-gray-600 font-bold text-xs flex justify-center">
-        {" "}
         à vista
       </p>
       <div className="flex justify-center w-full">

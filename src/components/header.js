@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -13,16 +13,22 @@ export default function Header() {
 
   return (
     <header className="bg-white flex justify-center items-center w-full h-28 text-white text-center">
-      <div className={`w-full max-w-[1300px] flex items-center px-4 py-2 ${areSearching ? "justify-center" : "justify-between"}`}>
+      <div
+        className={`w-full max-w-[1300px] flex items-center px-4 py-2 ${
+          areSearching ? "justify-center" : "justify-between"
+        }`}
+      >
         {/* Renderiza a imagem apenas quando não está pesquisando */}
         {!areSearching && (
-          <Image
-            src="/images/logoHeader2.png"
-            alt="Next.js logo"
-            priority
-            width={250}
-            height={1}
-          />
+          <a href="/">
+            <Image
+              src="/images/logoHeader2.png"
+              alt="Next.js logo"
+              priority
+              width={250}
+              height={1}
+            />
+          </a>
         )}
 
         {/* Campo de busca em telas grandes (sempre visível) */}
@@ -63,4 +69,3 @@ export default function Header() {
     </header>
   );
 }
-
